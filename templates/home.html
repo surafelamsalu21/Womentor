@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6">
+    <h1 class="text-2xl font-bold text-center text-blue-600 mb-4">Welcome to Resume Scanner</h1>
+    <p class="text-center text-gray-700 mb-6">
+        Upload your resume to get a detailed summary and evaluation based on our predefined criteria.
+    </p>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <form action="{{ url_for('routes.results') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
+        <div>
+            <label for="file" class="block text-sm font-medium text-gray-700">Upload Your Resume (PDF or DOCX)</label>
+            <input type="file" id="file" name="file" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md">
+        </div>
+
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
+            Upload Resume
+        </button>
+    </form>
+</div>
+{% endblock %}

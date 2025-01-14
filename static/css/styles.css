@@ -1,0 +1,83 @@
+/* Import Tailwind CSS (if not already included in the HTML) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles for the Flask Application */
+
+/* General Layout */
+.container {
+    @apply mx-auto px-4 py-8 max-w-7xl;
+}
+
+.card {
+    @apply bg-white shadow-md rounded-lg p-6;
+}
+
+/* Navigation Bar */
+.navbar {
+    @apply bg-blue-600 text-white shadow-lg flex justify-between items-center px-4 py-4;
+}
+
+.nav-link {
+    @apply hover:underline text-white mx-2;
+}
+
+/* Forms */
+.form-input {
+    @apply block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm;
+}
+
+.form-button {
+    @apply w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300;
+}
+
+/* Flash Messages */
+.flash-message {
+    @apply bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4;
+}
+
+/* Results Section */
+.results-summary {
+    @apply text-gray-700 bg-gray-100 p-4 rounded-md mb-6;
+}
+
+.results-score {
+    @apply text-xl font-bold text-blue-600;
+}
+
+/* Buttons */
+.button-primary {
+    @apply bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300;
+}
+
+.button-secondary {
+    @apply bg-gray-200 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 focus:outline-none focus:ring focus:ring-gray-400;
+}
+
+/* Footer */
+.footer {
+    @apply bg-blue-600 text-white text-center py-4 mt-8;
+}
+
+/* Typography */
+.heading {
+    @apply text-2xl font-bold text-blue-600 mb-4;
+}
+
+.subheading {
+    @apply text-lg font-semibold text-gray-800 mb-2;
+}
+
+.text-muted {
+    @apply text-gray-500;
+}
+
+/* Spacing */
+.section {
+    @apply mb-6;
+}
+
+.center-text {
+    @apply text-center;
+}
